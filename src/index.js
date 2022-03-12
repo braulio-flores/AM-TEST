@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import MagicMain from './MagicMain';
+
+import './styles/styles.scss';
+
 ReactDOM.render(
   <React.StrictMode>
-    <h1> Test AM</h1>
+    <MagicMain />
   </React.StrictMode>,
   document.getElementById('root')
 );
