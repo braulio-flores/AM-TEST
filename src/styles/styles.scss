@@ -1,10 +1,12 @@
 
+// 576px, 768px, 992px y 1200px.
+
 @import url('./base/_settings.scss');
 @import url('./base/_base.scss');
-// @import url('./components/_base.scss');
 
-// @import url('./components/_auth.scss');
-// @import url('./components/_buttons.scss');
-// @import url('./components/_links.scss');
-// @import url('./components/_journal.scss');
-// @import url('./components/_notes.scss');
+
+@import url('./base/_main.scss');
+@import url('./components/_ui.scss');
+@import url('./components/_buttons.scss');
+@import url('./components/_characters.scss');
+@import url('./components/_menu.scss');

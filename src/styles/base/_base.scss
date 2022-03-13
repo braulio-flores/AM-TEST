@@ -3,16 +3,32 @@ $primary: #5c62c5;
 $dark-grey: #363636;
 $ligth-grey: #d8d8d8;
 
-body {
-    background-color: #000;
+
+.mt-1{
+  margin-top: 5px !important;
 }
 
-@media screen and (min-width: 576px) {
-  body {
-    background-attachment: fixed;
-    background-image: url("../../assets/images/hpw2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.mt-5{
+  margin-top: 10px !important;
+}
+
+.mt-10{
+  margin-top: 20px !important;
+}
+
+
+.mb-1{
+  margin-bottom: 5px !important;
+}
+
+.mb-5{
+  margin-bottom: 10px !important;
+}
+
+.mb-10{
+  margin-bottom: 20px !important;
+}
+
+.mg{
+  margin: 20px !important;
 }

@@ -1,0 +1,63 @@
+// 576px, 768px, 992px y 1200px.
+
+$purple: rgba(107, 99, 181, 255);
+
+.menu__container {
+  background-color: rgba($color: $purple, $alpha: 1);
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+  overflow: hidden;
+  position: fixed;
+  margin: auto;
+  bottom: 0px;
+  z-index: 100;
+  width: 90vw;
+  right: 0px;
+  left: 0px;
+}
+
+.menu__container button:nth-child(1) {
+  border-right: 1px solid rgba(157, 149, 231, 255);
+}
+
+.menu__item {
+  height: 100%;
+  width: 50%;
+  min-width: 49%;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-right: 1px solid rgba($color: $purple, $alpha: 1);
+  padding: 7px 0px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .menu__container {
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    right: 70px;
+    top: 0px !important;
+    z-index: 100;
+    height: max-content;
+    bottom: auto;
+    width: max-content;
+    left: auto;
+    border-start-start-radius: 0px;
+    border-start-end-radius: 0px;
+  }
+  .menu__item {
+      padding: 5px 15px;
+  }
+}
+
+.menu__item-icon {
+  padding-left: 9px;
+}

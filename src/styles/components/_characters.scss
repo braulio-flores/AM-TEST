@@ -1,0 +1,221 @@
+// 576px, 768px, 992px y 1200px.
+
+.characters__container {
+  // CONTENEDOR DE TODAS LAS TARJETAS
+  // background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 100px;
+  position: relative;
+  top: 30px;
+  width: 90%;
+}
+
+.character__card {
+  // TARJETA DE CADA PERSONAJE
+  flex-basis: 43%;
+  max-width: 43%;
+  min-width: 43%;
+  display: flex;
+  background-color: #fff;
+  // justify-content: space-between;
+  margin: 8px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .character__card {
+    flex-direction: row;
+    flex-basis: 47%;
+    max-width: 47%;
+    min-width: 47%;
+    justify-content: space-between;
+  }
+}
+
+// @media screen and (min-width: 576px) {
+//   .character__card {
+//     flex-basis: 45%;
+//     max-width: 45%;
+//     min-width: 45%;
+//   }
+// }
+
+.character__card-img {
+  // CONTENEDOR DE LA IMAGEN DENTRO DE LA TARJETA
+  //   flex: 1;
+  //   background-color: #0f0;
+  //   min-height: 50%;
+  height: 175px;
+  display: flex;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+
+@media screen and (min-width: 400px) {
+  .character__card-img {
+    height: 165px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .character__card-img {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 0px;
+    border-end-start-radius: 10px;
+    flex-grow: 1.1;
+    min-width: 45%;
+    height: 100% !important;
+  }
+  .character__card-img-container {
+    // CONTENEDOR DENTRO DEL CONTENEDOR PARA INCLUIR LA IMAGEN PARA PODER MANTENER PROPIEDADES DE LA IMAGEN
+    margin: auto !important;
+    margin-left: auto !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-right: auto !important;
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .character__card-content {
+    flex-grow: 2 !important;
+    // min-height: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .character__card-img {
+    min-width: 30% !important;
+    max-width: 30% !important;
+  }
+}
+
+.character__card-img-container {
+  // CONTENEDOR DENTRO DEL CONTENEDOR PARA INCLUIR LA IMAGEN PARA PODER MANTENER PROPIEDADES DE LA IMAGEN
+  width: 90px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-top: 7px;
+  margin-bottom: -82px;
+}
+
+.character__card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character__card-content {
+  flex-grow: 1;
+  min-height: 50%;
+}
+
+// *INICIA LA PARTE DEL CONTENT
+
+.character__card-content {
+  flex-grow: 2;
+  padding: 0px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.character__card-content-name {
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  font-size: 0.72rem;
+  margin: 0px;
+}
+
+.character__card-content-info {
+  display: none;
+}
+
+.character__card-content-state-1 {
+  display: none;
+}
+
+.character__card-content-state-2 {
+  font-size: 0.5rem;
+  color: rgba(2, 2, 2, 0.4);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 400px) {
+  .character__card-content-name {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+  }
+  .character__card-content-state-2 {
+    font-size: 0.7rem;
+    margin-bottom: 0px;
+  }
+}
+
+.character__card-content-state-2 i {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.character__saveIcon {
+  font-size: 1.3rem;
+  height: 20px;
+  width: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .character__card-content-info {
+    display: inline-block;
+    font-size: 0.7rem;
+    line-height: 1.6;
+  }
+
+  .character__card-content-state-1 {
+    font-size: 0.7rem;
+    color: rgba(2, 2, 2, 0.4);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .character__card-content-state-2 {
+    display: none;
+  }
+  .character__card-content-name {
+    text-align: left;
+  }
+}
+
+//* INICIA LA PARTE DE LOS COLORES DE LAS TARJETAS SEGUN LA CASA DE HOWARTS
+
+.characters__grifindor {
+  background: linear-gradient(135deg, #ff120b, #ffc97b);
+}
+
+.characters__slytherin {
+  background: linear-gradient(135deg, #207e2d, #80e75d);
+}
+
+.characters__ravenclaw {
+  background: linear-gradient(135deg, #0a9aba, #64d0fe);
+}
+
+.characters__hufflepuff {
+  background: linear-gradient(135deg, #ffc904, #fff387);
+}

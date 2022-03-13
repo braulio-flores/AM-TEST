@@ -1,0 +1,38 @@
+// 576px, 768px, 992px y 1200px.
+
+$purple: rgba(107, 99, 181, 255);
+
+.buttons__container {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons__container {
+    width: 60vw;
+  }
+}
+
+.button__btn-filter {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #6b63b5;
+  border-color: #6b63b5;
+  color: #fff;
+  flex: 1;
+  font-family: "Nanum Gothic", sans-serif !important;
+//   margin: 5px 40px;
+  margin-top: 5px;
+  padding: 10px 0px;
+  min-width: 47%;
+  max-width: 47%;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color: $purple, $alpha: 0.5);
+  }
+  &:active {
+    background-color: rgba($color: $purple, $alpha: 1.0);
+    // background-color: red;
+  }
+  
+}
