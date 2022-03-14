@@ -1,0 +1,178 @@
+/* Modal */
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: white;
+  border-radius: 5px;
+  color: rgb(51, 51, 51);
+  display: inline;
+  max-height: 90vh;
+  max-width: 80vw;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  top: 0px !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  left: 0px !important;
+  margin: auto;
+}
+
+@media screen and (min-width: 576px) {
+    .modal{
+        max-width: 40vw;
+    }
+}
+
+// 576px, 768px, 992px y 1200px.
+$purple: rgba(107, 99, 181, 255);
+
+// * INICIAN LOS ESTILOS DEL FORMULARIO DENTRO DEL MODALE
+.modal__form-title {
+  // background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  font-size: 1rem;
+  margin: 0px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modal__close-modal {
+  color: rgba(2, 2, 2, 0.4);
+  font-size: 1.3rem;
+  height: 20px;
+  width: 20px;
+}
+
+.modal__main-container {
+  // background-color: lime;
+  padding: 8px;
+}
+
+.modale__form-container {
+  // background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  //   background-color: lightcoral;
+}
+
+.modale__form-group {
+  // ESTE ES EL CONTENEDOR DE CADA INPUT
+  /* background-color: aqua; */
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  color: rgba(2, 2, 2, 0.7);
+  letter-spacing: 0.5px;
+  /* padding: 2px 0px; */
+  margin: 3px 0px;
+  max-width: 90%;
+}
+
+.modal__form-submit {
+  min-width: 90%;
+  flex-basis: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .modale__form-container {
+    justify-content: space-between;
+  }
+  .buttons__container {
+    flex-basis: 40%;
+  }
+  .modal__form-submit {
+    min-width: 20%;
+    max-width: 20%;
+    flex-basis: 20%;
+  }
+  .modale__form-group {
+    flex-basis: 48%;
+    max-width: 48%;
+  }
+  .modale__form-upload-responsive {
+    max-width: 90% !important;
+    min-width: 90%;
+    text-align: center;
+    /* align-self: center; */
+    /* justify-self: center; */
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .modale__form-control-text{
+      height: 40px !important;
+  }
+}
+
+.modale__form-control-text {
+  width: 100%;
+  min-width: 100%;
+  border: none;
+  border-bottom: 0.1px solid #bbb;
+  background-color: rgba($color: #eeeeee, $alpha: 0.5);
+  height: 25px;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.modale__form-group-radios {
+  display: flex;
+  margin: 2px 0px;
+}
+
+.modale__form-group-radios label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.modale__form-upload-icon {
+  color: #6b63b5;
+  // font-size: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modale__form-group-file i {
+  padding-left: 6px;
+}
+
+.modale__form-group-file {
+  margin: 5px 0px;
+}

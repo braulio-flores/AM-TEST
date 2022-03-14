@@ -3,7 +3,7 @@
 $purple: rgba(107, 99, 181, 255);
 
 .menu__container {
-  background-color: rgba($color: $purple, $alpha: 1);
+  background-color: #6b63b5;
   border-start-start-radius: 10px;
   border-start-end-radius: 10px;
   overflow: hidden;
@@ -14,6 +14,10 @@ $purple: rgba(107, 99, 181, 255);
   width: 90vw;
   right: 0px;
   left: 0px;
+  &:active {
+    box-shadow: 0px -5px 4px #4d3b8d;
+    // EL BOX SHADOW SOLO SE MEUSTRA CUANDO EL MENU ESTA DESPLEGADO
+  }
 }
 
 .menu__container button:nth-child(1) {
@@ -28,6 +32,7 @@ $purple: rgba(107, 99, 181, 255);
   color: #fff;
   border: none;
   border-right: 1px solid rgba($color: $purple, $alpha: 1);
+  font-size: 0.75rem;
   padding: 7px 0px;
   display: inline-flex;
   justify-content: center;
@@ -45,16 +50,20 @@ $purple: rgba(107, 99, 181, 255);
     position: fixed;
     right: 70px;
     top: 0px !important;
-    z-index: 100;
+    // z-index: 100;
     height: max-content;
     bottom: auto;
     width: max-content;
     left: auto;
     border-start-start-radius: 0px;
     border-start-end-radius: 0px;
+    &:active {
+      box-shadow: 0px 5px 4px #4d3b8d;
+      // EL BOX SHADOW SOLO SE MEUSTRA CUANDO EL MENU ESTA DESPLEGADO
+    }
   }
   .menu__item {
-      padding: 5px 15px;
+    padding: 5px 15px;
   }
 }
 
