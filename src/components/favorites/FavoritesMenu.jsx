@@ -6,9 +6,6 @@ import FavoritesItem from "./FavoritesItem";
 const FavoritesMenu = () => {
   let { favorites } = useSelector((state) => state.favorites);
 
-  console.log("render");
-  console.log(favorites);
-
   const dispatch = useDispatch();
 
   const handleCloseFavorites = () => {

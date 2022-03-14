@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { startSetCharacters } from "../../actions/characters";
 import CharacterCard from "./CharacterCard";
 
-let characters = require("../../assets/hp-characters.json");
-
 const CharactersContainer = () => {
+  const { filter } = useSelector((state) => state.filter);
+  const { data: characters } = useSelector((state) => state.characters);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(startSetCharacters(filter));
+  }, [filter, dispatch]);
+
   return (
     <div className="characters__container">
-      {characters.map((character) => {
-        return <CharacterCard key={ character.name } character={ character } />;
+      {characters.map((character, i) => {
+        return <CharacterCard key={i} character={character} />;
       })}
     </div>
   );

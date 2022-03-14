@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MagicMain from './MagicMain';
+import MagicApp from './MagicApp';
 
 import './styles/styles.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MagicMain />
+    <MagicApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import MainContent from './components/ui/MainContent';
 import { store } from './store/store';
 
-const MagicMain = () => {
+const MagicApp = () => {
   return (
     <Provider store={ store } >
       <MainContent />
@@ -11,4 +11,4 @@ const MagicMain = () => {
   )
 }
 
-export default MagicMain
+export default MagicApp

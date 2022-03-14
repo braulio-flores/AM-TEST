@@ -16,13 +16,16 @@
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "sass": "^1.49.9",
+    "sweetalert2": "^11.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start2": "concurrently \"react-scripts start\" \"json-server --watch src/api/db.json --port 5004\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api": "json-server --watch src/api/db.json --port 5004"
   },
   "eslintConfig": {
     "extends": [
