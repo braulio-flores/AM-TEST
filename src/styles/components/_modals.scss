@@ -72,6 +72,11 @@ $purple: rgba(107, 99, 181, 255);
   font-size: 1.3rem;
   height: 20px;
   width: 20px;
+  transition: color 0.5s;
+  &:hover{
+      cursor: pointer;
+      color: #000;
+  }
 }
 
 .modal__main-container {
@@ -102,9 +107,11 @@ $purple: rgba(107, 99, 181, 255);
 }
 
 .modal__form-submit {
-  min-width: 90%;
-  flex-basis: 90%;
+  min-width: 70%;
+  flex-basis: 70%;
   margin: auto;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
 }
 
 @media screen and (min-width: 576px) {
@@ -115,9 +122,13 @@ $purple: rgba(107, 99, 181, 255);
     flex-basis: 40%;
   }
   .modal__form-submit {
-    min-width: 20%;
-    max-width: 20%;
-    flex-basis: 20%;
+    // min-width: 20%;
+    min-width: max-content;
+    max-width: max-content;
+    padding: 10px 35px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    // flex-basis: 20%;
   }
   .modale__form-group {
     flex-basis: 48%;

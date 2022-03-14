@@ -19,7 +19,7 @@ const MainContent = () => {
                 <p>Selecciona tu filtro</p>
                 <div className="buttons__container">
                     <ButtonFilter title="ESTUDIANTES" />
-                    <ButtonFilter title="STAF" />
+                    <ButtonFilter title="STAFF" />
                 </div>
             </div>
         </div>

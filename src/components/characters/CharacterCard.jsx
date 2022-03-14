@@ -1,33 +1,50 @@
 import React from "react";
+import { capitalizeF } from "../../helpers/capitalieFirstLetter";
 import CharacterAddFav from "./CharacterAddFav";
 
-const CharacterCard = () => {
+const CharacterCard = ({ character }) => {
+  const {
+    name,
+    image,
+    dateOfBirth,
+    gender,
+    eyeColour,
+    hairColour,
+    house,
+    alive,
+    hogwartsStudent,
+    hogwartsStaff,
+  } = character;
+
+  // console.log(character);
+
   return (
-    <div className="character__card">
-      <div className="character__card-img characters__slytherin">
+    <div className={`character__card ${!alive && "characters__deat"}`}>
+      <div className={`character__card-img characters__${house}`}>
         <div className="character__card-img-container">
-          <img
-            src="http://hp-api.herokuapp.com/images/harry.jpg"
-            alt="Imagen de la Monalisa"
-          />
+          <img src={image} alt={name} />
         </div>
       </div>
       <div className="character__card-content">
         <p className="character__card-content-state-1">
-          VIVO / ESTUDIANTE
-          <CharacterAddFav />
+          {alive ? "VIVO" : "FINADO"} / {hogwartsStudent && "ESTUDIANTE"}{" "}
+          {hogwartsStaff && "STAFF"}
+          <CharacterAddFav character={character} />
         </p>
         <p className="character__card-content-name">
-            Jack Russell terrier
+          {!alive && "+ "}
+          {name}
         </p>
         <p className="character__card-content-state-2">
-          VIVO <br /> ESTUDIANTE <CharacterAddFav />
+          {alive ? "VIVO" : "FINADO"} <br /> {hogwartsStudent && "ESTUDIANTE"}{" "}
+          {hogwartsStaff && "STAFF"} <CharacterAddFav character={character} />
         </p>
         <p className="character__card-content-info">
-          <b>Cumpleaños:</b> 31-07-1980 <br />
-          <b>Genero:</b> Male <br />
-          <b>Color de Ojos:</b> Green <br />
-          <b>Color de Pelo:</b> Black <br />
+          <b>Cumpleaños:</b> {dateOfBirth === "" ? "-- -- ---" : dateOfBirth}{" "}
+          <br />
+          <b>Genero:</b> {capitalizeF(gender)} <br />
+          <b>Color de Ojos:</b> {capitalizeF(eyeColour)} <br />
+          <b>Color de Pelo:</b> {capitalizeF(hairColour)} <br />
         </p>
       </div>
     </div>

@@ -26,6 +26,7 @@ $purple: rgba(107, 99, 181, 255);
   padding: 10px 0px;
   min-width: 47%;
   max-width: 47%;
+  transition: background 0.5s;
   &:hover {
     cursor: pointer;
     background-color: rgba($color: $purple, $alpha: 0.5);
@@ -35,4 +36,8 @@ $purple: rgba(107, 99, 181, 255);
     // background-color: red;
   }
   
+}
+
+.button__btn-filter-active{
+  background-color: rgba($color: $purple, $alpha: 1.0) !important;
 }

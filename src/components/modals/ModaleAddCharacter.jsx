@@ -1,5 +1,9 @@
 import Modal from "react-modal";
 import React from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import { closeModal } from "../../actions/ui";
 import ModaleClose from "./ModaleClose";
 
 const customStyles = {
@@ -16,6 +20,10 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const ModaleAddCharacter = () => {
+  const dispatch = useDispatch();
+
+  const { modalOpen } = useSelector((state) => state.ui);
+
   const handlePictureUpload = () => {
     document.querySelector("#fileSelector").click();
   };
@@ -29,13 +37,17 @@ const ModaleAddCharacter = () => {
     }
   };
 
+  const closeM = () => {
+    dispatch(closeModal());
+  };
+
   return (
     <Modal
-      isOpen={true}
+      isOpen={modalOpen}
       //   onAfterOpen={afterOpenModal}
-      // onRequestClose={closeModal}
+      onRequestClose={closeM}
       style={customStyles}
-      closeTimeoutMS={200}
+      closeTimeoutMS={300}
       className="modal"
       overlayClassName="modal-fondo"
     >

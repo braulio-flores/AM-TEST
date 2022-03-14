@@ -1,24 +1,23 @@
 import React from "react";
 import FavoritesDeleteItem from "./FavoritesDeleteItem";
 
-const FavoritesItem = () => {
+const FavoritesItem = ({ favorite }) => {
+  const { name, image } = favorite;
+
   return (
     <>
       <div className="favorites__item">
         <div className="favorites__item-image">
           <div className="favorites__item-image-container">
-            <img
-              src="http://hp-api.herokuapp.com/images/harry.jpg"
-              alt="Imagen de la Monalisa"
-            />
+            <img src={image} alt={name} />
           </div>
         </div>
-        <div className="favorites__item-name">Luna Lovegood</div>
+        <div className="favorites__item-name">{name}</div>
         <div className="favorites__item-trash">
-          <FavoritesDeleteItem />
+          <FavoritesDeleteItem favorite={favorite} />
         </div>
       </div>
-      <hr className="favorite__item-hr"/>
+      <hr className="favorite__item-hr" />
     </>
   );
 };
