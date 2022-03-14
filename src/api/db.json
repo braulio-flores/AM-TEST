@@ -549,6 +549,52 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "id": "2022-03-14T21:38:29.978Z",
+      "name": "Braulio",
+      "species": "human",
+      "gender": "male",
+      "house": "",
+      "dateOfBirth": "Potter",
+      "yearOfBirth": "",
+      "ancestry": "squib",
+      "eyeColour": "BROWN",
+      "hairColour": "444444",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": ""
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "David Bradley",
+      "alive": true,
+      "image": "https://res.cloudinary.com/dumxfvbif/image/upload/v1647293911/arrpv6tauizo2ug9xxlt.png"
+    },
+    {
+      "id": "2022-03-14T22:19:12.822Z",
+      "name": "Braulio",
+      "species": "human",
+      "gender": "female",
+      "house": "",
+      "dateOfBirth": "2222222",
+      "yearOfBirth": "",
+      "ancestry": "squib",
+      "eyeColour": "BROWN",
+      "hairColour": "444444",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": ""
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "David Bradley",
+      "alive": true,
+      "image": "https://res.cloudinary.com/dumxfvbif/image/upload/v1647296354/khlb4kuf0f5apvnmijid.png"
     }
   ]
 }
