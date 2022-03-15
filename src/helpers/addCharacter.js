@@ -1,7 +1,7 @@
 
 export const postData = async (data = {}) => {
     // Opciones por defecto estan marcadas con un *
-    const response = await fetch('http://localhost:5004/charactersHP', {
+    const response = await fetch('http://localhost:5000/charactersHP', {
       method: 'POST', 
       mode: 'cors', 
       headers: {

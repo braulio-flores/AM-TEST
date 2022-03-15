@@ -21,12 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start":"node server.js", 
-    "dev": "concurrently \"react-scripts start\" \"json-server --watch src/api/db.json --port 5004\"",
+    "start":"react-scripts start", 
+    "deveJ": "concurrently \"react-scripts start --port 3000\" \"json-server --watch db.json --port 5000\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "json-server --watch src/api/db.json --port 5004"
+    "server": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
