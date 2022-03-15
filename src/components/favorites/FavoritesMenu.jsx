@@ -20,10 +20,10 @@ const FavoritesMenu = () => {
       ></div>
       <div className="favorites__content">
         {
-          favorites.length === 0 &&  <p className="favorites__item">No tienes Favoritos</p>        
+          favorites.length === 0 &&  <p className="favorites__item favorites__no-item">No tienes Favoritos</p>        
         }
-        {favorites.map((favorite) => {
-          return <FavoritesItem key={favorite.name} favorite={favorite} />;
+        {favorites.map((favorite, i) => {
+          return <FavoritesItem key={`favorite.name${i}`} favorite={favorite} />;
         })}
       </div>
     </>

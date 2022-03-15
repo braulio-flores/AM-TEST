@@ -76,8 +76,16 @@ $purple: rgba(107, 99, 181, 255);
   }
 }
 
+.favorites__no-item{
+  padding-bottom: 15px;
+}
+
 // RESPONSIVE DEL MENU DE FAVORITOS
 @media screen and (min-width: 576px) {
+  .favorites__no-item{
+    padding-bottom: 0px;
+  }
+
   .favorites__content {
     right: 70px;
     top: 0px !important;

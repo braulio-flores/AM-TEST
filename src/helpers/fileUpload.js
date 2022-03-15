@@ -1,6 +1,6 @@
 export const fileUpload = async(file) =>{
  
-    const cloudUrl = `http://api.cloudinary.com/v1_1/dumxfvbif/upload`;
+    const cloudUrl = `https://api.cloudinary.com/v1_1/dumxfvbif/upload`;
 
     const formData = new FormData();
     formData.append('upload_preset','react-journal');

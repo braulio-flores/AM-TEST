@@ -26,7 +26,8 @@ export const favoritesReducer = (state = inicialState, action) => {
       return {
         ...state,
         favorites: state.favorites.filter(
-          (character) => character.name !== action.payload.name
+          (character) =>
+            character.image !== action.payload.image            
         ),
       };
     default:

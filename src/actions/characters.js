@@ -68,9 +68,9 @@ export const startAddingNewCharacter = (valuesForm, file) => {
       showConfirmButton: false,
       allowOutsideClick: false,
 
-      onBeforeOpen: () => {
-        Swal.showLoading();
-      },
+      // onBeforeOpen: () => {
+      //   Swal.showLoading();
+      // },
     });
 
     if (!file) {
@@ -98,7 +98,6 @@ const addingNewCharacterJS = (valuesForm) => {
   return async (dispatch, useSelector) => {
 
     const filter = useSelector(state=>state);
-    console.log(filter);
 
     // // ESTO ME DA EL FORMATO PARA QUE TODOS TENGAN UNA MISMA LOGICA
     const dataForm = formatToAddCharacter(valuesForm);
@@ -106,10 +105,10 @@ const addingNewCharacterJS = (valuesForm) => {
 
     //AQUI GENERO LA PETICION PARA HACER EL POST AL JSON SERVE
     await postData(dataForm).then((data) => {
-      console.log(data);
+      // console.log(data);
     });
 
-    dispatch(startSetCharacters());
+    dispatch(startSetCharacters(filter));
     // console.log(valuesForm);
     Swal.close();
 

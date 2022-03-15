@@ -8,10 +8,13 @@ const CharacterAddFav = ({ character }) => {
   const favorites = useSelector((state) => state.favorites.favorites);
 
   const savedNotSaved = useMemo(
-    () => favorites.find((element) => element.name === character.name),
+    () =>
+      favorites.find(
+        (element) =>
+          element.name === character.name && element.image === character.image
+      ),
     [favorites, character]
   );
-
 
   useEffect(() => {
     localStorage.setItem("favorite", JSON.stringify(favorites));

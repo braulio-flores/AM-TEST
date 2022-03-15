@@ -18,9 +18,6 @@ const CharactersContainer = () => {
       showConfirmButton: false,
       allowOutsideClick: false,
 
-      onBeforeOpen: () => {
-        Swal.showLoading();
-      },
     });
       dispatch(startSetCharacters(filter));
     Swal.close();
