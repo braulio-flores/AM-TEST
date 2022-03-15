@@ -1,7 +1,8 @@
+import { urlToFetchCharacters } from "./variables";
 
 export const postData = async (data = {}) => {
     // Opciones por defecto estan marcadas con un *
-    const response = await fetch('http://localhost:5000/charactersHP', {
+    const response = await fetch(urlToFetchCharacters, {
       method: 'POST', 
       mode: 'cors', 
       headers: {
