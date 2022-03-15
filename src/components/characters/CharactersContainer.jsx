@@ -11,16 +11,7 @@ const CharactersContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    Swal.fire({
-      title: "Cargando Personajes",
-      text: "Por favor espere...",
-      allowEscapeKey: false,
-      showConfirmButton: false,
-      allowOutsideClick: false,
-
-    });
-      dispatch(startSetCharacters(filter));
-    Swal.close();
+    dispatch(startSetCharacters(filter));
   }, [filter, dispatch]);
 
   return (

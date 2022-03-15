@@ -8,6 +8,15 @@ import { types } from "../types/types";
 
 export const startSetCharacters = (filter) => {
   return async (dispatch) => {
+    Swal.fire({
+      title: "Cargando Personajes",
+      text: "Por favor espere...",
+      allowEscapeKey: false,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+
+    });
+
     dispatch(charactersLoadingTrue());
     await getCharacters()
       .then((res) => {
@@ -17,6 +26,7 @@ export const startSetCharacters = (filter) => {
         console.error(error);
       });
     dispatch(charactersLoadingFalse());
+    
   };
 };
 
@@ -39,6 +49,7 @@ export const setCharacters = (characters, filter) => {
       break;
   }
 
+  Swal.close();
   return {
     type: types.charactersSetCharacters,
     payload: result,

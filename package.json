@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start":"react-scripts start", 
-    "deveJ": "concurrently \"react-scripts start --port 3000\" \"json-server --watch db.json --port 5000\"",
+    "deveJ": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 5000\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -45,8 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "json-server": "^0.17.0"
   }
 }
