@@ -21,6 +21,7 @@ Hubo un punto en el que se generaron ciertos comits extra y de prueba, ya que se
     **3.** Ejecutar el comando **npm run start** para poder ver la aplicacion corriendo en el puerto 5000 y la aplicacion se correra automaticamente.
     ###### Para ejecutar las pruebas
     **1.** Habiendo completado los pasos 1 y 2 del punto anterior y manteniendonos en la misma ruta dentro de la terminal, ejecutar el comando **npm run test** y las pruebas comenzaran a correr.   
+    (Realmente no cree pruevas funcionales solo quedo en la configuracion basica)
 
 ## Lo que mas me gusto del desarrollo
 
@@ -40,6 +41,8 @@ Hhubiera implementado un inicio de sesion, ya que cuenta con personajes favorito
 Hubiera ampliado el formulario, para que indicara de que casa es, si esta vivo o muerto, entre otras cosas mas especificas para en caso de que se abriera el modal.
 Hubiera implemtado la funcionalidad de modificar el personaje y tambien eliminarlo, sobre todo el eliminar. 
 Hubiera implementado mas filtros, como lo es por casa, o por si esta vivo o muerto. 
+
+Si hubiera tenido mas tiempo, hubiera completado las pruebas, ya que cuando me atore subiendo la pagina a produccion, me gano el tiempo y ya no pude completarlas.
 
 ## Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 
